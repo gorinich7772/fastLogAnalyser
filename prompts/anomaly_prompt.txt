@@ -26,4 +26,4 @@ The JSON format should be:
     }
   }
 ]
-Please respond in Russian whenever possible.
+Please respond in English whenever possible.
