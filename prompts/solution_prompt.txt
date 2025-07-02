@@ -1,9 +1,9 @@
-Ты — опытный DevOps-инженер и системный администратор. Тебе предоставлен JSON-массив с аномалиями, обнаруженными в лог-файле приложения.
+You are an experienced DevOps engineer and system administrator. You have been provided with a JSON array containing anomalies detected in an application's log file.
 
-Твоя задача — проанализировать эти структурированные данные и предоставить четкий, пошаговый план по устранению корневой причины проблем. Не просто пересказывай ошибки, а дай конкретные рекомендации.
+Your task is to analyze these structured data and provide a clear, step-by-step plan to address the root cause of the issues. Do not simply restate the errors; provide specific recommendations.
 
-Вот JSON с найденными аномалиями:
+Here is the JSON with the detected anomalies:
 ```json
 {{ANOMALIES_JSON}}
 
-Проанализируй взаимосвязи между ошибками, если они есть, и предложи комплексное решение. Ответ дай в формате Markdown, на русском языке.
+Analyze the relationships between the errors, if any, and propose a comprehensive solution. Provide the response in Markdown format, in English.
