@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Analyzer Pro v3.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; }
+        .ai-response { white-space: pre-wrap; word-break: break-word; font-family: monospace; }
+        .spinner { border-top-color: #3b82f6; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Log Analyzer Pro</h1>
+            <p class="text-lg text-gray-600 mt-2">Двухэтапный интеллектуальный анализ логов</p>
+        </header>
+
+        <main>
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-200 mb-8">
+                <div class="space-y-4">
+                    <input type="file" id="logFile" accept=".txt,.log" class="mt-1 block w-full text-sm text-gray-500
+                        file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:font-semibold
+                        file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 transition-colors duration-200 cursor-pointer
+                        disabled:opacity-50 disabled:cursor-not-allowed">
+                    <button id="submitBtn" class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 active:bg-blue-800 transition-all duration-200 disabled:bg-gray-400 disabled:cursor-not-allowed text-base font-semibold shadow-sm hover:shadow-md">
+                        Анализировать
+                    </button>
+                </div>
+            </div>
+
+            <div id="resultsContainer" class="hidden">
+                <div id="metaInfo" class="mb-6 p-4 bg-white rounded-2xl shadow-lg border">
+                    <h3 class="font-semibold text-lg mb-2">Детали запроса</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <div><strong>UUID:</strong> <span id="uuid-val" class="font-mono text-gray-700 bg-gray-100 px-2 py-1 rounded"></span></div>
+                        <div><strong>Время:</strong> <span id="datetime-val" class="font-mono text-gray-700 bg-gray-100 px-2 py-1 rounded"></span></div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div id="anomalies-column" class="bg-white p-6 rounded-2xl shadow-lg border border-gray-200">
+                        <div id="anomalies-status" class="flex items-center mb-4"></div>
+                        <div id="anomalies-content" class="hidden">
+                             <div id="anomaliesAccordion" class="space-y-2"></div>
+                        </div>
+                    </div>
+                    <div id="solution-column" class="bg-white p-6 rounded-2xl shadow-lg border border-gray-200">
+                        <div id="solution-status" class="flex items-center mb-4"></div>
+                        <div id="solution-content" class="hidden">
+                             <div id="solutionResult" class="p-4 bg-green-50 border border-green-200 rounded-lg ai-response text-gray-800"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="fixed bottom-4 right-4 text-xs text-gray-500">
+        ПО создано при участии: Молотов Филипп, Зубов Кирилл, Коровяков Роман
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
