@@ -1,0 +1,9 @@
+# Виртуальное окружение Python
+venv/
+.env/
+env/
+*.venv/
+
+# Файлы PyCharm/IntelliJ IDEA
+.idea/
+*.iml
