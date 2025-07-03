@@ -7,3 +7,6 @@ env/
 # Файлы PyCharm/IntelliJ IDEA
 .idea/
 *.iml
+
+# Исключение для важного файла .env
+!.env
