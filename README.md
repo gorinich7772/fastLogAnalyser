@@ -7,6 +7,8 @@ The application implements a two-stage analysis approach:
 
 2. **Solution Generation**: The collected anomalies are passed to the model for comprehensive analysis and to generate a step-by-step plan to resolve the root causes of issues.
 
+**Youtube Link:** https://youtu.be/fKjaAjgAiHE
+
 # 🚀 Features
 
 - **Web Interface**: A simple and user-friendly interface for uploading log files (.log, .txt) and viewing results.
