@@ -114,7 +114,7 @@ Plaintext
 │     ├── anomaly_prompt.txt  
 │     └── solution_prompt.txt  
 ├── main.py              # Main file with FastAPI endpoints  
-├── ollama_client.py     # Client for interacting with Oll Maverick
+├── ollama_client.py     # Client for interacting with Oll Maverick  
 ├── pydantic_models.py   # Pydantic data models  
 ├── requirements.txt     # Python dependencies  
 └── README.md            # This file  
