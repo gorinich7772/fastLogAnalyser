@@ -108,11 +108,11 @@ Plaintext
 
 .  
 ├── static/              # Static frontend files (HTML, CSS, JS)  
-│     ├── index.html  
-│     └── script.js  
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── index.html  
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── script.js  
 ├── prompts/             # System prompts for LLM  
-│     ├── anomaly_prompt.txt  
-│     └── solution_prompt.txt  
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── anomaly_prompt.txt  
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── solution_prompt.txt  
 ├── main.py              # Main file with FastAPI endpoints  
 ├── ollama_client.py     # Client for interacting with Oll Maverick  
 ├── pydantic_models.py   # Pydantic data models  
